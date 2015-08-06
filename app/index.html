@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="bower_components/angular/angular.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/main.css">
+	<title>
+	    Contactical App
+	</title>
+</head>
+<body ng-app="">
+<div class="app-title">
+	<h1>
+		Contactical
+	</h1>
+	<h2>
+	    The Ironclad Address Book
+	</h2>
+</div>
+    <!-- add controller here -->
+	<div class="contact-list inline-module">
+		<!-- list of all contact -->
+        <div >
+            <h4>
+                <span class=contact-name>
+                        <!-- show name with custom filter -->
+                </span>
+                <avatar name=contact.name></avatar>
+            </h4>
+            <p>
+                <!-- occupation -->
+            </p>
+            <p>
+                <a href="mailto:">
+                    <!-- email -->
+                </a>
+             </p>
+		</div>
+	</div>
+    <!-- AddContactController -->
+	<div class="add-contact inline-module">
+        <!-- ng-submit -->
+	    <form>
+            <h3>Add A New Contact</h3>	
+            <label>
+                Name (Req'd)
+                <input required type="text">
+            </label>
+            <label>
+                Age
+                <input type="number">
+            </label>
+            <label for="occupation">
+                Occupation
+                <input type="text">
+            </label>
+            <label for="">
+                Email (Req'd)
+                <input type="email" required>
+            </label>
+            <label for="submit">
+                Add New Contact
+                <input type="submit" id="submitNewContact">	
+            </label>
+            <!-- ng-if=errorMessage -->
+            <div class=warning>Please check the information and try again.</div>
+        </form>
+	</div>
+	<script src="main.js"></script>
+</body>
+</html>
